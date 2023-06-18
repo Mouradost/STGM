@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Lablack"
+  given-names: "Mourad"
+  orcid: "https://orcid.org/0000-0001-5997-7199"
+keywords:
+  - Traffic Prediction
+  - Traffic Forecasting
+  - Graph Neural Netowrk
+  - Attention Mechanism
+  - Multivariate Spatio-Temporal Neural Network
+title: "STGM: Spatio-Temporal Graph Mixformer for Traffic Forecasting"
+version: 1.0.0
+doi: 10.5281/zenodo.1234
+date-released: 2023-06-18
+url: "https://github.com/Mouradost/STGM"
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Lablack"
+    given-names: "Mourad"
+    orcid: "https://orcid.org/0000-0001-5997-7199"
+  - family-names: "Shen"
+    given-names: "Yanming"
+    orcid: "https://orcid.org/0000-0003-4108-0230"
+  doi: "10.1016/j.eswa.2023.120281"
+  journal: "Expert Systems with Applications"
+  month: 4
+  start: 120281
+  end: 120292
+  title: "Spatio-Temporal Graph Mixformer for Traffic Forecasting"
+  volume: 228
+  year: 2023
