@@ -1,0 +1,11 @@
+einops
+numpy
+matplotlib
+pandas
+torch
+opt_einsum
+tqdm
+hydra-core
+omegaconf
+networkx
+wandb

@@ -1,0 +1,56 @@
+dataset:
+  _target_: datasets.pemsd7m.Dataset
+  name: PEMSD7M
+  data_folder_path: ${paths.dataset}
+  mode: null
+  train_ratio: 0.8
+  val_ratio: 0.1
+  window_size: 12
+  batch_size: 32
+  nb_worker: 0
+  r: 1
+model:
+  _target_: models.stgm_full.Model
+  name: STGM
+  in_channels: 1
+  hidden_channels: 64
+  out_channels: 1
+  nb_blocks: 2
+  timestep_max: ${dataset.window_size}
+  channels_last: true
+  device: ${device}
+  log_level: ${log.level}
+estimator:
+  _target_: models.estimator.Model
+  name: STGM_ESTIMATOR
+  in_channels: 1
+  hidden_channels: 64
+  bias: false
+  nb_blocks: 2
+  channels_last: true
+  device: ${device}
+  log_level: ${log.level}
+trainer:
+  _target_: trainers.default.Trainer
+  epochs: 2
+  lr: 0.001
+  clip: 3.0
+  use_amp: false
+  verbose: true
+  model_pred_single: false
+  log_level: ${log.level}
+  logger_name: ${log.logger}
+  device: ${device}
+paths:
+  log: ${hydra:runtime.cwd}
+  dataset: ~/Documents/Datasets/
+  prior_weights: null
+log:
+  logger: default
+  level: 50
+  global_level: 20
+  project: TrafficForcastingSTGM
+  entity: YOUR_USERNAME
+  nb_hours: 24
+  style: default
+device: cuda

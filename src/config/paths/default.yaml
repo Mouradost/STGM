@@ -1,0 +1,3 @@
+log: ${hydra:runtime.cwd}
+dataset: ~/Documents/Datasets/
+prior_weights: null

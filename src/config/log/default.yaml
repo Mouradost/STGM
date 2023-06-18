@@ -1,0 +1,7 @@
+logger: default # (default, wandb)
+level: CRITICAL
+global_level: INFO
+project: TrafficForcastingSTGM # Change it to your project name
+entity: YOUR_USERNAME # Provide your wandb username (don't forget to setup your creditials)
+nb_hours: 24 # Used for visualization
+style: default

@@ -1,0 +1,68 @@
+program: sweeper.py
+method: bayes
+project: Traffic
+group: METRLA_sweep
+run_cap: 10
+
+metric:
+  goal: minimize
+  name: val/MAE
+parameters:
+  # Dataset
+  dataset.batch_size:
+    values: [16, 32, 64]
+  # Model
+  model.hidden_channels:
+    values: [16, 32, 64]
+  model.nb_blocks:
+    values: [1, 2, 3]
+  model.use_super_node:
+    distribution: categorical
+    values:
+      - 'true'
+      - 'false'
+  model.embedding_dict.time:
+    distribution: categorical
+    values:
+      - 2017
+      - null
+  model.embedding_dict.day:
+    distribution: categorical
+    values:
+      - 7
+      - null
+  model.embedding_dict.node:
+    distribution: categorical
+    values:
+      - 207
+      - null
+  model.embedding_dict.degree:
+    distribution: categorical
+    values:
+      - 207
+      - null
+  # Trainer
+  trainer.lr:
+    distribution: uniform
+    min: 1e-4
+    max: 1e-2
+  trainer.use_ema:
+    distribution: categorical
+    values:
+      - 'true'
+      - 'false'
+  trainer.clip:
+    values: [0., 1., 2., 3., 4., 5.]
+
+command:
+  - ${env}
+  - python
+  - ${program}
+  - ${args_no_hyphens}
+  - log.logger=wandb
+  - dataset=metrla
+  - trainer=default
+  - trainer.epochs=10
+  - trainer.display=false
+  - trainer.save_checkpoints=false
+  - model=stgm

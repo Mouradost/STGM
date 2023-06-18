@@ -1,0 +1,10 @@
+_target_: datasets.pemsd7m.Dataset
+name: PEMSD7M
+data_folder_path: ${paths.dataset}
+mode: null # (train, test, val) automatically set by run.py and inference.py
+train_ratio: 0.8
+val_ratio: 0.1
+window_size: 12
+batch_size: 32
+nb_worker: 0 # If a large dataset is used set workers to the number of CPUs (exp: 8)
+r: 1

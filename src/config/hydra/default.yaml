@@ -1,0 +1,8 @@
+run:
+  dir: ${hydra:runtime.cwd}/logs/${dataset.name}/${model.name}/${now:%Y-%m-%d}/${now:%H-%M-%S}
+job:
+  chdir: true
+job_logging:
+  root:
+    level: ${log.global_level}
+    filename: ${hydra:runtime.cwd}/logs/${dataset.name}/${model.name}/${now:%Y-%m-%d}/${now:%H-%M-%S}

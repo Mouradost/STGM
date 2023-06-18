@@ -1,0 +1,9 @@
+[2023-06-18 10:31:59,955][Run][INFO] - Logs will be saved at /home/Mouradost/Documents/GitHub/STGM/src/logs/PEMS-BAY/STGM/2023-06-18/10-31-59
+[2023-06-18 10:31:59,975][Run][INFO] - Using cuda device -> NVIDIA GeForce RTX 2070
+[2023-06-18 10:32:00,057][numexpr.utils][INFO] - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2023-06-18 10:32:00,058][numexpr.utils][INFO] - NumExpr defaulting to 8 threads.
+[2023-06-18 10:32:01,261][Dataset][INFO] - Dataset PEMSBAY (train) length: 36457
+[2023-06-18 10:32:01,261][Dataset][WARNING] - No pre-calculated contribution matrix was provided ! You will experience Heavy CPU load and Slow data loading...
+[2023-06-18 10:32:01,994][Dataset][INFO] - Dataset PEMSBAY (val) length: 5187
+[2023-06-18 10:32:01,994][Dataset][WARNING] - No pre-calculated contribution matrix was provided ! You will experience Heavy CPU load and Slow data loading...
+[2023-06-18 10:32:01,994][Run][INFO] - Dataset PEMSBAY mean: 62.619574 std: 9.594371

@@ -1,0 +1,45 @@
+dataset:
+  _target_: datasets.pemsbay.Dataset
+  name: PEMS-BAY
+  data_folder_path: ${paths.dataset}
+  mode: null # (train, test, val) automatically set by run.py and inference.py
+  train_ratio: 0.8
+  val_ratio: 0.1
+  window_size: 12
+  batch_size: 128
+  nb_worker: 0 # If a large dataset is used set workers to the number of CPUs (exp: 8)
+  r: 1
+model:
+  _target_: models.stgm.Model
+  name: STGM
+  in_channels: 1
+  h_channels: 64
+  out_channels: 1
+  nb_blocks: 2
+  channels_last: True
+  device: ${device}
+  log_level: ${log.level}
+trainer:
+  _target_: trainers.default.Trainer
+  epochs: 100
+  lr: 1e-3
+  clip: 3.0
+  use_amp: false
+  verbose: true
+  model_pred_single: false # If the model predict only one step at a time
+  log_level: ${log.level}
+  logger_name: ${log.logger}
+  device: ${device}
+paths:
+  log: ${hydra:runtime.cwd}
+  dataset: ~/mouradost/Datasets/
+  prior_weights: null
+log:
+  logger: default
+  level: 50
+  global_level: 20
+  project: TrafficForcasting
+  entity: Mouradost
+  nb_hours: 24
+  style: default
+device: cuda

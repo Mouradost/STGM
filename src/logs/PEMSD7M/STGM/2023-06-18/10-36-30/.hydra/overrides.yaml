@@ -1,0 +1,2 @@
+- trainer.epochs=2
+- dataset=pemsd7m

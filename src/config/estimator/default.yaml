@@ -1,0 +1,9 @@
+_target_: models.estimator.Model
+name: STGM_ESTIMATOR
+in_channels: 1
+hidden_channels: 64
+bias: false
+nb_blocks: 2
+channels_last: True
+device: ${device}
+log_level: ${log.level}

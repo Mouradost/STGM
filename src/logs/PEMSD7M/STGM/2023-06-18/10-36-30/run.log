@@ -1,0 +1,11 @@
+[2023-06-18 10:36:30,559][Run][INFO] - Logs will be saved at /home/Mouradost/Documents/GitHub/STGM/src/logs/PEMSD7M/STGM/2023-06-18/10-36-30
+[2023-06-18 10:36:30,592][Run][INFO] - Using cuda device -> NVIDIA GeForce RTX 2070
+[2023-06-18 10:36:30,660][numexpr.utils][INFO] - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2023-06-18 10:36:30,660][numexpr.utils][INFO] - NumExpr defaulting to 8 threads.
+[2023-06-18 10:36:31,257][Dataset][INFO] - Dataset PEMSD7M (train) length: 8846
+[2023-06-18 10:36:31,258][Dataset][WARNING] - No pre-calculated contribution matrix was provided ! You will experience Heavy CPU load and Slow data loading...
+[2023-06-18 10:36:31,559][Dataset][INFO] - Dataset PEMSD7M (val) length: 1243
+[2023-06-18 10:36:31,559][Dataset][WARNING] - No pre-calculated contribution matrix was provided ! You will experience Heavy CPU load and Slow data loading...
+[2023-06-18 10:36:31,559][Run][INFO] - Dataset PEMSD7M mean: 58.889184 std: 13.483269
+[2023-06-18 10:39:07,147][Dataset][INFO] - Dataset PEMSD7M (test) length: 2511
+[2023-06-18 10:39:07,147][Dataset][WARNING] - No pre-calculated contribution matrix was provided ! You will experience Heavy CPU load and Slow data loading...

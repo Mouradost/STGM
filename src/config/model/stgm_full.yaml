@@ -1,0 +1,10 @@
+_target_: models.stgm_full.Model
+name: STGM
+in_channels: 1
+hidden_channels: 64
+out_channels: 1
+nb_blocks: 2
+timestep_max: ${dataset.window_size}
+channels_last: True
+device: ${device}
+log_level: ${log.level}

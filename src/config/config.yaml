@@ -1,0 +1,11 @@
+defaults:
+  - dataset: pemsd7m
+  - estimator: default
+  - model: stgm_full
+  - trainer: full
+  - paths: default
+  - log: default
+  - hydra: default
+  - _self_
+
+device: auto

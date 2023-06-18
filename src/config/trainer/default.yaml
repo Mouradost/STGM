@@ -1,0 +1,10 @@
+_target_: trainers.default.Trainer
+epochs: 100
+lr: 1e-3
+clip: 3.0
+use_amp: false
+verbose: true
+model_pred_single: false # If the model predict only one step at a time
+log_level: ${log.level}
+logger_name: ${log.logger}
+device: ${device}
