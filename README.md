@@ -1,6 +1,6 @@
 # <div align="center"> STGM: Spatio-Temporal Graph Mixformer for Traffic Forecasting </div>
 
-<p align="center"><img src="./assets/Architecture.pdf" alt="Architecture" width="70%" /></p>
+<p align="center"><img src="./assets/Architecture.png" alt="Architecture" width="70%" /></p>
 
 <p align="center">
     <a href="https://github.com/Mouradost/STGM/blob/main/LICENSE">
