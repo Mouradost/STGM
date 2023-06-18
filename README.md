@@ -9,6 +9,15 @@
     <a href="https://zenodo.org/badge/latestdoi/551265354">
         <img src="https://zenodo.org/badge/551265354.svg" alt="DOI">
     </a>
+    <a href="https://paperswithcode.com/sota/traffic-prediction-on-metr-la?p=spatio-temporal-graph-mixformer-for-traffic">
+        <img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/spatio-temporal-graph-mixformer-for-traffic/traffic-prediction-on-metr-la" alt="paper-with-code-pems-bay-metr-la">
+    </a>
+    <a href="https://paperswithcode.com/sota/traffic-prediction-on-pemsd7-m?p=spatio-temporal-graph-mixformer-for-traffic">
+        <img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/spatio-temporal-graph-mixformer-for-traffic/traffic-prediction-on-pemsd7-m" alt="paper-with-code-pemsd7-m">
+    </a>
+    <a href="https://paperswithcode.com/sota/traffic-prediction-on-pems-bay?p=spatio-temporal-graph-mixformer-for-traffic">
+        <img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/spatio-temporal-graph-mixformer-for-traffic/traffic-prediction-on-pems-bay" alt="paper-with-code-pems-bay">
+    </a>
   <a href="https://github.com/psf/black">
     <img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style: black" />
   </a>
