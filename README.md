@@ -1,10 +1,13 @@
 # <div align="center"> STGM: Spatio-Temporal Graph Mixformer for Traffic Forecasting </div>
 
-<p align="center"><img src="./assets/Architecture.png" alt="Architecture" width="70%" /></p>
+<p align="center"><img src="./assets/Architecture.png" alt="Architecture" width="100%" /></p>
 
 <p align="center">
     <a href="https://github.com/Mouradost/STGM/blob/main/LICENSE">
         <img alt="LICENCE" src="https://img.shields.io/github/license/Mouradost/STGM.svg">
+    </a>
+    <a href="https://zenodo.org/badge/latestdoi/551265354">
+        <img src="https://zenodo.org/badge/551265354.svg" alt="DOI">
     </a>
   <a href="https://github.com/psf/black">
     <img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style: black" />
@@ -24,9 +27,9 @@
 
 ## Performance and Visualization
 
-<img src="assets/Results.png" alt="Table" style="zoom:49.4%;" />
+<img src="assets/Results.png" alt="Table"  width="100%" />
 
-<img src="assets/PerdictionSample.png" alt="Prediction Sample" style="zoom:25%;" />
+<img src="assets/PerdictionSample.png" alt="Prediction Sample"  width="100%" />
 
 ## <span id="table_of_contents"> Table of Contents </span>
 
