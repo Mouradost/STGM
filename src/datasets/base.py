@@ -152,7 +152,6 @@ class BaseDataset(torch.utils.data.Dataset):
             )
 
     def dtw(self, idx: int):
-        return self.adj
         if self.sim is not None:
             if len(self.sim.shape) > 2:
                 return self.sim[idx]
