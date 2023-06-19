@@ -268,7 +268,7 @@ class Model(BaseModel):
         self,
         x: torch.Tensor,  # [B, L, N, F] | [B, F, N, L]
         adj: torch.Tensor,  # [N, N]
-        idx: torch.Tensor = None,  # [B, 2]
+        idx: torch.Tensor = None,  # [B, 2, L]
         *args, # Used to obmit any extra args provided by the trainer
         **kwargs # Used to obmit any extra kwargs provided by the trainer
     ) -> torch.Tensor:
@@ -323,11 +323,11 @@ class Trainer(BaseTrainer):
     def validate(self, val_data: torch.utils.data.DataLoader):
         for i, (idx, adj, sim, x, y) in enumerate(val_data):
             idx, adj, sim, x, y = (
-              idx.to(self.device),
-              adj.to(self.device),
-              sim.to(self.device),
-              x.to(self.device),
-              y.to(self.device)
+                idx.to(self.device), # [B, 2, L]
+                adj.to(self.device), # [B, N, N]
+                sim.to(self.device), # [B, N, N]
+                x.to(self.device),   # [B, L, N, F]
+                y.to(self.device)    # [B, L, N, F']
             )
             # Validation step
             self.metrics["val/loss"] += self.val_step(
@@ -372,13 +372,13 @@ class Trainer(BaseTrainer):
             for epoch in epoch_loop:
                 self.metrics["train/loss"] = 0
                 self.metrics["val/loss"] = 0
-                for i, (idx, x, y) in enumerate(train_data):
+                for i, (idx, adj, sim, x, y) in enumerate(train_data):
                     idx, adj, sim, x, y = (
-                        idx.to(self.device),
-                        adj.to(self.device),
-                        sim.to(self.device),
-                        x.to(self.device),
-                        y.to(self.device)
+                        idx.to(self.device), # [B, 2, L]
+                        adj.to(self.device), # [B, N, N]
+                        sim.to(self.device), # [B, N, N]
+                        x.to(self.device),   # [B, L, N, F]
+                        y.to(self.device)    # [B, L, N, F']
                     )
                 # Train step
                 self.metrics["train/loss"] += self.train_step(
@@ -416,7 +416,7 @@ Some sweep samples are provided under `./src/config/sweeps/*.yaml`, the user can
 
 <img src="assets/SweepsExample.png" alt="Sweep Example" style="zoom:25%;" />
 
-The use can run the sweeps as follows:
+The user can run the sweeps as follows:
 
 ```shell
 wandb sweep ./src/config/sweeps/[SWEEP_CONFIG_NAME].yaml
