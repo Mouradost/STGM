@@ -421,18 +421,6 @@ The user can run the sweeps as follows:
 wandb sweep ./src/config/sweeps/[SWEEP_CONFIG_NAME].yaml
 ```
 
-Or
-
-```shell
-./sweeps.py ./src/config/sweeps/[SWEEP_CONFIG_NAME].yaml
-```
-
-Or
-
-```shell
-python sweeps.py ./src/config/sweeps/[SWEEP_CONFIG_NAME].yaml
-```
-
 ## <span id="disclaimer"> Disclaimer </span>
 
 The code in this repo is a simplified and polished version of the original code used for the paper, if you encounter any bugs or a big difference between the metrics reported in the [paper](https://doi.org/10.1016/j.eswa.2023.120281) and your run please open an issue following the provided guidelines.
