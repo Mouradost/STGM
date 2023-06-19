@@ -99,7 +99,6 @@ src
   |   ├─__init__.py
   |   ├─base.py
   |   ├─default.py
-  |   ├─estimator.py
   |   ├─full.py
   ├─logs                                     -> Run logs
   |   ├─METR-LA                              -> Dataset name (auto-generated)
