@@ -1,5 +1,6 @@
 _target_: trainers.full.Trainer
 epochs: 100
+batch_size: 32
 lr: 1e-3
 clip: 3.0
 use_amp: false
