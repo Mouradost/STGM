@@ -176,7 +176,7 @@ Start the run by simply executing `./run.py` or `python run.py` which will use t
 Refer to this example if it is ambiguous.
 
 ```shell
-./run.py trainer.epochs=100 trainer.batch_size=128 dataset=metrla device=cuda:1 model.nb_blocks=1 model=stgm log.type=wandb
+./run.py trainer.epochs=100 trainer.batch_size=128 dataset=metrla device=cuda:1 model.nb_blocks=1 model=stgm log.logger=wandb
 ```
 
 ### <span id="predict"> Predict using STGM </span>
