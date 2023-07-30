@@ -111,9 +111,9 @@ def sequential_dtw(x: np.ndarray, y: np.ndarray) -> np.ndarray:
 def main(
     path,
     start: int = 0,
-    end: int = -1,
+    end: int = None,
     node_start: int = 0,
-    node_end: int = -1,
+    node_end: int = None,
     name: str = "dtw",
     use_parrallel: bool = True,
 ):
