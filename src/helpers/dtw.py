@@ -154,8 +154,8 @@ if __name__ == "__main__":
         "-e",
         "--end",
         type=int,
-        default=-1,
-        help="The end index. [int] (default: -1)",
+        default=None,
+        help="The end index. [int] (default: None)",
     )
     parser.add_argument(
         "-S",
@@ -168,8 +168,8 @@ if __name__ == "__main__":
         "-E",
         "--node_end",
         type=int,
-        default=-1,
-        help="The end node index. [int] (default: -1)",
+        default=None,
+        help="The end node index. [int] (default: None)",
     )
     parser.add_argument(
         "-p",
