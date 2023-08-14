@@ -187,7 +187,7 @@ class Trainer(BaseTrainer):
         if self.model_pred_single:
             y = y[:, -1:]
 
-        contrib = self.e_model(x=x, idx=idx)
+        contrib = self.e_model(x=self.scaler.norm(x), idx=idx)
         e_loss = self.loss_fn(contrib, sim, dim=(0, 1, 2))
         loss = self.loss_fn(
             pred=self.scaler.reverse(
@@ -218,7 +218,10 @@ class Trainer(BaseTrainer):
                 )
                 prediction = self.scaler.reverse(
                     self.model(
-                        x=x, adj=adj, adj_hat=self.e_model(x=x, idx=idx), idx=idx
+                        x=self.scaler.norm(x),
+                        adj=adj,
+                        adj_hat=self.e_model(x=self.scaler.norm(x), idx=idx),
+                        idx=idx,
                     )
                     .cpu()
                     .detach()

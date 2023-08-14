@@ -131,7 +131,9 @@ class BaseTrainer:
                     x.to(self.device),
                 )
                 prediction = self.scaler.reverse(
-                    self.model(x=x, adj=adj, adj_hat=sim, idx=idx).cpu().detach()
+                    self.model(x=self.scaler.norm(x), adj=adj, adj_hat=sim, idx=idx)
+                    .cpu()
+                    .detach()
                 )
                 all_grounds.append(y.detach())
                 all_predictions.append(prediction)
