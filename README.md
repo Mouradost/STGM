@@ -167,7 +167,7 @@ For more options try:
 
 ### <span id="train"> Train STGM </span>
 
-Start the run by simply executing `./run.py` or `python run.py` which will use the default configuration. Any parameter to alter the default configuration can be provided following the bellow schema.
+Start the run by simply executing `./run.py` or `python run.py` which will use the default configuration. Any parameter to alter the default configuration can be provided following the below schema.
 
 ```shell
 ./run.py [MODULE]=$value [MODULE].[PARAM]=$value [TOP_LEVEL_PARAM]=$value
@@ -207,7 +207,7 @@ The user only needs to overwrite the `load_data` function in order to provide `s
 
 The script for the custom dataset needs to be placed in the _dataset folder_ as follows `./src/datasets/../[DATASET_NAME].py`.
 
-Follow the bellow snippet to provide the necessary data to the `BaseDataset`:
+Follow the below snippet to provide the necessary data to the `BaseDataset`:
 
 ```python
 import pandas as pd
@@ -238,7 +238,7 @@ The user need to provide a **YAML** config file for the custom dataset in `./src
 
 #### <span id="custom_model"> Model </span>
 
-Follow the bellow snippet to create a custom model, please subclass the `BaseModel` otherwise the program won't run properly since it provides model saving mechanisms and other functionality used in other classes:
+Follow the below snippet to create a custom model, please subclass the `BaseModel` otherwise the program won't run properly since it provides model saving mechanisms and other functionality used in other classes:
 
 ```python
 import logging
@@ -291,7 +291,7 @@ The user need to provide a **YAML** config file for the custom model in `./src/c
 
 The user only needs to overwrite `train`, `train_step`, `validate`, and `val_step` from `BaseTrainer` to create a custom training logic.
 
-Follow the bellow snippet for an easy start 😉.
+Follow the below snippet for an easy start 😉.
 
 > Note that there is no need for normalization since it is handled by the `BaseTrainer`.
 
